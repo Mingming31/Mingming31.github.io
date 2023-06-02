@@ -1,0 +1,12 @@
+
+NOTE!!!!!!!!!
+
+offsetX= right (positive value)
+	 left (negative value)
+
+offsetY= down (positive value)
+	 up (negative value)
+
+0 = value means no change (default value)
+
+box-shadow: offsetX offsetY blurRadius spreadRadius color;

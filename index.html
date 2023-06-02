@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tita Fridas Store</title>
+
+<!--js swiper-->
+
+
+<!--font awsome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!--css link-->
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<!--header section starts-->    
+
+<header class="header"> <!--logo and store name-->
+        <div class="logo">
+            <img src="/images/logo.png" alt="">
+            <p>Tita Fridas
+            <small><br>Pizza and Shawarma</small>
+            </p>     
+        </div>
+    
+    <nav class="navbar"> <!--navigation bar-->
+        <a href="#home">home</a>
+        <a href="#services">services</a>
+        <a href="#products">products</a>
+        <a href="#contact">contact us</a>
+        <a href="#about">about us</a>
+    </nav>
+
+    <div class="icons"> <!--navbar icons-->
+        <div class="fas fa-bars" id="menu-btn"></div> <!--burger btn-->
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+       
+    </div>
+
+    <form action="" class="search-form"> <!--search bar-->
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <div class="shopping-cart" id="shopping-cart"> <!--Shopping Cart Products-->
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="images/shawarma1.jpg" alt="">
+            <div class="content">
+                <h3>Shawarma1</h3>
+                <span class="price">&#8369; 70.00/-</span>
+                <span class="quantity">qty : 1</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="images/shawarma2.jpg" alt="">
+            <div class="content">
+                <h3>Shawarma2</h3>
+                <span class="price">&#8369; 70.00/-</span>
+                <span class="quantity">qty : 1</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="images/shawarma3.jpg" alt="">
+            <div class="content">
+                <h3>Shawarma3</h3>
+                <span class="price">&#8369; 70.00/-</span>
+                <span class="quantity">qty : 1</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="images/pizza1.jpg" alt="">
+            <div class="content">
+                <h3>Pizza1</h3>
+                <span class="price">&#8369; 250.00/-</span>
+                <span class="quantity">qty : 1</span>
+            </div>
+        </div>
+
+        <div class="total">total : &#8369; 390.00/-</div> <!--total-->
+        <a href="#" class="btn">checkout</a>
+    </div>
+
+    <form action="" class="login-form"> <!--login form-->
+        <h3>Admin</h3>
+        <input type="email" placeholder="email" class="box">
+        <input type="password" placeholder="password" class="box">
+
+        <p>forget your password <a href="#">click here</a></p>
+        <p>don't have an account? <a href="#">create now</a></p>
+
+        <input type="submit" value="login now" class="btn">
+
+    </form>
+
+</header>
+
+<!--header section ends-->  
+
+<!--home section starts-->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>freshly and <span>baked</span> dough pita bread</h3>
+        <p>Tita Frida's very own version of shawarma and freshly-oven-baked pizzas! Dough pita bread, sauces.</p>
+        <h4>by: Chief Gilbert</h4>
+        <a href="#products" class="btn">Order Now</a>
+    </div>
+
+</section>
+
+<!--home section ends-->
+
+<!--services section starts-->  
+
+<section class="services" id="services">
+
+    <h1 class="heading"> our <span>services</span></h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="/images/features-1.jpg" alt="">
+            <h3>Freshly Baked</h3>
+            <a href="#" class="btn">read more</a>
+          
+           
+            
+        </button>
+        </div>
+
+        <div class="box">
+            <img src="images/features-raider.png" alt="">
+            <h3>Free Delivery</h3>
+
+                <button class="btn" id="icon-details">read more</button>
+        
+           
+
+        </div>
+    
+        <div class="box">
+            <img src="/images/service-payment.png" alt="">
+            <h3>Easy Payment</h3>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+    </div>
+
+</section>
+<!--services section ends-->  
+
+<section class="products" id="products">
+
+    <h1 class="heading">our <span>products</span></h1>
+
+    <div class="slider-box">
+
+        <div class="pizza-box">
+
+            <div class="pizza-1">
+                <img src="/images/pizza1.jpg" alt="">
+                <h2>Pepperoni</h2>
+                <div class="price">&#8369; 299.00</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+
+                <a href="#" class="btn-cart" id="btn-cart">add to cart</a>
+
+            </div>
+
+            <div class="pizza-1">
+                <img src="/images/pizza2.jpg" alt="">
+                <h2>Hawaiian</h2>
+                <div class="price">&#8369; 299.00</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                
+                <a href="#" class="btn-cart" id="btn-cart">add to cart</a>
+
+            </div>
+
+            <div class="pizza-1">
+                <img src="/images/pizza3.jpg" alt="">
+                <h2>All Meat</h2>
+                <div class="price">&#8369; 299.00</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                
+                <a href="#" class="btn-cart" id="btn-cart">add to cart</a>
+
+            </div>
+
+            <div class="pizza-1">
+                <img src="/images/pizza4.jpg" alt="">
+                <h2>Margehrita Pizza</h2>
+                <div class="price">&#8369; 299.00</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                
+                <a href="#" class="btn-cart"id="btn-cart">add to cart</a>
+
+            </div>
+        </div>
+
+
+        <div class="shawarma-box">
+
+            <div class="shawarma-1">
+
+                <img src="/images/shawarma1.jpg" alt="">
+                <h2>Chicken Shawarma</h2>
+                <div class="price">&#8369; 79.00</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+
+            <div class="shawarma-1">
+                <img src="/images/shawarma2.jpg" alt="">
+                <h2>Beef Shawarma</h2>
+                <div class="price">&#8369; 79.00</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+
+            <div class="shawarma-1">
+                <img src="/images/shawarma3.jpg" alt="">
+                <h2>Shawarma Meal</h2>
+                <div class="price">&#8369; 79.00</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+
+            <div class="shawarma-1">
+                <img src="/images/shawarma4.jpg" alt="">
+                <h2>Cheessy Shawarma</h2>
+                <div class="price">&#8369; 79.00</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--products section starts-->
+
+
+<!--contact-->
+<section class="contact" id="contact">
+    
+    <h1 class="heading">Contact Us</h1>
+    
+    <div class="card-main">
+        
+        <div class="card">
+            <h2>Arayat Branch</h2>
+            <i class="card-icon fas fa-phone"></i>
+            <p>+63 977 2613 3670 (Globe) <br> +63 999 5602 379 (Smart)</p>
+        </div>
+
+        <div class="card">
+            <h2>Sta.ana Branch</h2>
+            <i class="card-icon fas fa-phone"></i>
+            <p>+63 916 4460 662 (Globe) <br> +63 969 3592 435 (Smart)</p>
+        </div>
+
+        <div class="card">
+            <h2>Mexico Branch</h2>
+            <i class="card-icon fas fa-phone"></i>
+            <p>+63 995 3917 099 (Globe) <br> +63 960 5164 691 (Smart)</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!--products section ends-->
+
+<!--about us starts-->
+
+    <section class="about" id="about">
+
+        <h1 class="heading">About Us</h1>
+
+        <div class="about-titafridas">
+
+        <p>
+        <span>Tita Fridas Pizza and Shawarma</span>
+        established year 2018. Its name "Fridas" came from the mother's name of chief Gilbert
+        the owner of store. Our first branch is located in Poblacion Arayat,Pampanga. After three years
+        chief gilbert decided to expand his business by build on another branch in Sta.ana and Mexico Pampanga.
+        </p>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+<!--about us ends-->
+
+
+
+
+<!--js file link-->
+<script src="js/script.js"></script>
+
+</body>
+</html>

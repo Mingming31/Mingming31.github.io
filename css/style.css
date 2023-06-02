@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --orange: #ff7800;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem gray;
+    --border: 2rem #0000001a;
+    --outline: 1rem #0000001a;
+    --outline-hover: 2rem solid var(--black)
+}
+* {
+font-family: 'Poppins', sans-serif;
+margin: 0; padding: 0;
+box-sizing: border-box;
+outline: none; border:none;
+text-decoration: none;
+text-transform: capitalize;         /*to capitalize all the first letter of word*/
+transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;             /* hide all the words out in the border*/
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body {
+    background: #eee;
+}
+
+section {                           /*section home*/
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--black);
+}
+
+.heading span {
+    background: var(--orange);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%,0% 100%,7% 50%,0% 0%);
+
+}
+.btn {      /*button design*/
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover {  /*button design*/
+    background: var(--orange);
+    color: #fff;
+}
+.header {
+    position: fixed;                /*to stay in the page kahit magscroll*/
+    top: 0; left: 0; right: 0;
+    z-index: 1;                     /*to stay in the front most*/
+    display:flex;
+    align-items: center;
+    justify-content: space-between; /* to mek space between*/
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: var(--box-shadow);  
+}
+
+.header img {
+    width: 5rem;
+    height: 5rem;
+    padding: 0;
+}
+.header .logo {
+    display: flex;
+    padding-top: 2rem;
+}
+
+.header p {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    line-height: 0.7;
+}
+.header p small{
+    font-size: 1.5rem;
+}
+
+.header .navbar.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+.header .navbar a {
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover {
+    color: var(--orange);
+}
+
+.header .icons div {                /*sukat ng div container color gray*/
+    height: 4.5rem;
+    width: 6rem;          
+    line-height: 4.5rem;
+    border-radius: 4.5rem;
+    background: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    margin-right: .3rem;
+    text-align: center;             /*para gumitna ang mga icon*/
+}
+
+.header .icons div:hover {
+    background: var(--orange);      /*hover background*/
+    color: #fff;                  /*color of the icon*/
+}
+
+#menu-btn {
+    display: none;                  /*hide the burger menu */
+}
+
+.header .search-form {
+    position: absolute;
+    top: 110%; right: -110%;
+    max-width: 50rem;               /* to maintain the maximum width of the searchbar*/
+    height: 5rem;
+    background:#fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background:none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.header .search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color:var(--black);
+    cursor: pointer;
+}
+.header .search-form label:hover {
+    color: var(--orange);
+}
+
+.header .search-form.active {       /*js transition of search-box*/
+    right: 5rem;                    /*position where you want to place the transition */
+    transition: .5s linear;         /*speed of transition and direction*/
+}
+/*shopping-cart container*/
+
+.header .shopping-cart {
+    position: absolute;
+    top: 110%; right: -110%;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 35rem;
+    background: #fff;
+}
+
+.header .shopping-cart.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+.header .shopping-cart .box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0; /*top-bottom , left */
+}
+
+.header .shopping-cart .box img {
+    height: 10rem;
+    width: 10rem;
+}
+
+.header .shopping-cart .box .fa-trash {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%; right: 2rem;
+    cursor:pointer;
+    color: var(--light-color);
+    transform: translateY(-50%);    /*element moving to the top*/
+}
+
+.header .shopping-cart .box .fa-trash:hover {
+    color: var(--orange);
+}
+
+.header .shopping-cart .box .content h3 {
+    color: var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.header .shopping-cart .box .content span {
+    color: var(--light-color);
+    font-size: 1.6rem;
+}
+
+.header .shopping-cart .box .content .quantity {
+    padding-left: 1rem;
+}
+
+.header .shopping-cart .total {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+}
+
+.header .shopping-cart .btn {
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+
+.pizza-1 .btn-cart {
+
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+
+.pizza-1 .btn-cart:hover {  /*button design*/
+    background: var(--orange);
+    color: #fff;
+}
+
+
+/*login form*/
+
+.header .login-form {
+    position: absolute;
+    top: 110%; right: -110%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    text-align: center;
+}
+
+.header .login-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+.header .login-form h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.header .login-form .box {
+    margin: .7rem 0;
+    background: #eee;
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.header .login-form p {
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+}
+
+.header .login-form p a {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+/*home section*/
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/homebg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+    
+}
+
+.home .content {
+    text-align: center;
+    width: 60%;
+}
+
+.home .content h3 {
+    color: #eee;
+    font-size: 3rem;
+}
+
+.home .content h3 span {
+    color:yellow;
+}
+
+.home .content p {
+    color: #eee;
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    line-height: 1.8rem;
+}
+
+.home .content h4 {
+    color:black;
+}
+/*services*/
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+    position: relative;
+}
+
+.services .box-container .box {
+    padding: 3rem 2rem;
+    background: #fff;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+.services .box-container .box:hover {
+    border: .2rem solid var(--black);
+    box-shadow: none;
+}
+
+.services .box-container .box img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.services .box-container .box h3 {
+    font-size: 2.5rem;
+    line-height: 1.8;
+    color: var(--black);
+}
+.box button {
+    border: none;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.box button p{
+    visibility: hidden;
+}
+.box button:hover p {
+    visibility: visible;
+}
+.box button p span {
+    color: var(--black);
+    font-weight: bold;
+}
+.box .details {
+    position: absolute;
+    top: 75%; right:-150%; left: 5%;
+    font-size: 2rem;
+}
+.box .details.active {
+    right: 5rem;
+    transition: .1s linear;
+}
+.box .btn {
+    border: .3rem solid var(--black);
+}
+
+/*Products*/
+
+.slider-box {
+    box-shadow: var(--box-shadow);
+    
+}
+
+.slider-box .pizza-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+
+.slider-box .pizza-box .pizza-1 {
+    padding: 1rem;
+    text-align: center;
+}
+.slider-box .pizza-box .pizza-1:hover {
+    border: .1rem solid var(--black);
+    border-radius: 1rem;
+}
+
+.slider-box .pizza-box .pizza-1 img {
+    width: 30rem;
+    height: 20rem;
+    border-radius: .5rem;
+}
+
+/*shawarma css*/
+
+.slider-box .shawarma-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+
+.slider-box .shawarma-box .shawarma-1 {
+    padding: 1rem;
+    text-align: center;
+}
+.slider-box .shawarma-box .shawarma-1:hover {
+    border: .1rem solid var(--black);
+    border-radius: 1rem;
+}
+
+.slider-box .shawarma-box .shawarma-1 img {
+    width: 30rem;
+    height: 20rem;
+    border-radius: .5rem;
+}
+
+/*contact*/
+
+.contact .card-main {
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+    height: 30rem;
+}
+
+.contact .card-main .card {
+    text-align: center;
+    padding: 3rem;
+}
+
+.contact .card-main .card h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.contact .card-main .card .card-icon {
+    font-size: 28px;
+    background: #ff6348;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+  }
+  .contact .card-main .card:hover .card-icon {
+    background: none;
+    color: #ff6348;
+    transform: scale (1.6);
+  }
+
+  .contact .card-main .card p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    max-height:0;
+    opacity:0;
+    transition: 0.3s linear;
+
+  }
+  .contact .card-main .card:hover p{
+    max-height:40px;
+    opacity: 1;
+  }
+
+  /*about us*/
+  
+  .about .about-titafridas {
+    box-shadow: var(--box-shadow);
+    text-align: center;
+
+  }
+
+  .about .about-titafridas p {
+    font-size: 2rem;
+    color: var(--black);
+    text-indent: 2rem;
+    padding: 10rem;
+  }
+
+  .about .about-titafridas p span {
+    color: var(--orange);
+  }
+
+
+
+
+
+
+
+
+
+
+
+/*media screen queries*/
+
+@media (max-width:991px) {
+
+    html{
+        font-size: 55%;
+    }
+    .header {
+        padding: 2rem;
+    }
+
+    section {                         
+    padding: 2rem;
+    }
+    
+}
+
+@media (max-width:768px) { 
+
+    #menu-btn {
+        display: inline-block;                
+    }
+
+    .header .search-form {
+        width: 90%;
+    }
+    
+    .header .navbar {
+        position: absolute;
+        top: 110%; right: -110%; 
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+    }
+    
+    .header .navbar a {
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+
+    .slider-box .pizza-box {
+        display: block;
+        grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+        gap: 1.5rem;
+    }
+
+    .contact .card-main {
+        display: block;
+        grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+        gap: 1.5rem;
+        height: 65rem;
+    }
+}
+
+@media (max-width:450px) { 
+
+    html{
+        font-size: 50%;
+    }
+    
+    .heading {
+        font-size: 2.5rem;
+    }
+
+}
+
